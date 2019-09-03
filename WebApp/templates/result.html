@@ -1,0 +1,33 @@
+{% extends 'template.html' %}
+{% block content %}
+					<h1 style="font-weight: bold; font-size: 300%;">Predictions</h1>
+					<div class="description">
+            <div class="row" style="margin: 0 3%; padding: 2% 0; background-color: rgba(0,0,0,0.3);">
+<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 col-sm-offset-0 col-xs-offset-0 col-md-offset-0 col-lg-offset-0"> 
+         <img src="{{ Image }}">
+      </div>
+
+      <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 col-sm-offset-0 col-xs-offset-0 col-md-offset-0 col-lg-offset-0"> 
+        <br>
+         <h3>Plant Disease Name</h3>
+                    <br>
+                    {{disease[0]}}
+                    <br>
+                    {{disease[1]}}
+                    <br>
+                    {{disease[2]}}
+      </div>
+      <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 col-sm-offset-0 col-xs-offset-0 col-md-offset-0 col-lg-offset-0"> 
+        <br>
+         <h3>Probability</h3>
+                    <br>
+                    {{category[0]}}
+                    <br>
+                    {{category[1]}}
+                    <br>
+                    {{category[2]}}
+      </div>
+						
+    				</div>
+  </div>
+  {% endblock %}

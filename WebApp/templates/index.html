@@ -1,0 +1,17 @@
+{% extends 'template.html' %}
+{% block content %}
+					<h1 style="font-weight: bold; font-size: 500%; font-style: italic;">Plant Disease Classifier</h1>
+					<br>
+					<div class="description">
+						<p>
+							Upload the image of the plant leaf to see whether it's healthy or not!
+						</p>
+					</div>
+					<br>
+					<form method ='post' enctype=multipart/form-data>
+					<input type="file" name="file">
+					<br>
+					<br>
+					<b><input type="submit" value="Predict"></b>
+				</form>
+    {% endblock %}

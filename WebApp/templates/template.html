@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+		<!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Plant Disease Classifier</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  
+        <!-- font awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <link rel="icon" href="static/icon.png" type="text/png">
+
+        <style type="text/css">
+        	body{
+        		background-image: url("static/plant4.jpg");
+        		background-size: cover;
+        		font-family: 'Open Sans', sans-serif; 
+        		line-height: 30px; 
+        		text-align: center; 
+        	}
+
+        	.top-content{
+        		position: fixed;
+        		top:20%;
+        	}
+
+        	.navbar { background: #444; transition: all .6s; backface-visibility: hidden; }
+
+			.navbar.navbar-no-bg { background: #444; background: rgba(0, 0, 0, 0.4); }
+
+			.navbar-dark .navbar-nav { font-size: 15px; color: #fff; text-transform: uppercase; }
+			.navbar-dark .navbar-nav .nav-link { color: #fff; color: rgba(255, 255, 255, 0.8); border: 0; }
+			.navbar-dark .navbar-nav .nav-link:hover { color: #fff; }
+			.navbar-dark .navbar-nav .nav-link:focus { color: #fff; outline: 0; }
+
+			.navbar-expand-md .navbar-nav .nav-link { padding-right: 1rem; padding-left: 1rem; }
+
+      .navbar-brand {
+        width: 123px;
+        background: url(static/icon.png) left center no-repeat;
+        border: 0;
+        text-indent: -99999px;
+      }
+
+			.top-content { width: 100%; color: #fff;}
+			.top-content h1 { margin-top: 25px; color: #fff; }
+			.top-content .description { margin: 30px 0 10px 0; font-size: 180%;}
+			.top-content .description p { color: #fff; }
+			.top-content .description a { color: #fff; color: rgba(255, 255, 255, 0.8); border-color: #fff; border-color: rgba(255, 255, 255, 0.8); }
+			.top-content .description a:hover,
+			.top-content .description a:focus { color: #fff; color: rgba(255, 255, 255, 0.8); }
+
+			input[type=submit] {
+  				background-color: #dc3543;
+  				color: white;
+  				padding: 10px 20px;
+  				border: none;
+  				border-radius: 4px;
+  				cursor: pointer;
+			}
+
+			input[type=submit]:hover {
+  				background-color: #dc3550;
+			}
+
+      .profile .img-box{
+  opacity: 1;
+  display: block;
+  position: relative;
+}
+.profile .img-box:after{
+  content:"";
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.img-box ul{
+  position: absolute;
+  z-index: 2;
+  bottom: 50px;
+  text-align: center;
+  width: 100%;
+  padding-left: 0px;
+  height: 0px;
+  margin:0px;
+  opacity: 0;
+}
+.profile .img-box:after, .img-box ul, .img-box ul li{
+  -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.img-box ul i{
+  font-size: 130% ;
+  /*letter-spacing: 10px;*/
+}
+.img-box ul li{
+    width: 29%;
+      height: auto;
+      /*text-align: center;*/
+      /*border: 1px solid #88C425;*/
+      /*margin: 2px;*/
+      /*padding: 5px;*/
+  display: inline-block;
+}
+.img-box a{
+  color:#fff;
+}
+.img-box:hover:after{
+  opacity: 1;
+}
+.img-box:hover ul{
+  opacity: 1;
+}
+.img-box ul a{
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.img-box a:hover li{
+  border-color: #fff;
+  color: #88C425;
+}
+
+        </style>
+
+    </head>
+
+    <body>
+
+		<!-- Top menu -->
+		<nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
+			<div class="container">
+        <!--<a class="navbar-brand" href="index.html">Bootstrap 4 Carousel Template</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>-->
+			    <div class="collapse navbar-collapse" id="navbarNav">
+			        <ul class="navbar-nav ml-auto">
+			            <li class="nav-item">
+                      <a class="nav-link scroll-link" href="{{ url_for('hello_world') }}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link scroll-link" href="{{ url_for('about_page') }}">About</a>
+                  </li>
+			        </ul>
+			    </div>
+		    </div>
+		</nav>
+
+        <!-- Top content -->
+        <div class="top-content">
+
+        {% block content %}
+        {% endblock %}
+
+      </div>
+    </body>
+  </html>
