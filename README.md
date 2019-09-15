@@ -12,8 +12,6 @@
 [![](https://img.shields.io/badge/Made_with-Flask-red?style=for-the-badge&logo=flask)](https://palletsprojects.com/p/flask  "Flask")
 [![](https://img.shields.io/badge/Made_with-Android-red?style=for-the-badge&logo=android)](https://developer.android.com  "Android")
 
-
-
 <br>
 
 </div>
