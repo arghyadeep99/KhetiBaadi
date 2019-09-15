@@ -7,6 +7,19 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity" >
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:title="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+        <!--app:logo="@mipmap/ic_launcher_round"-->
+
     <Button
             android:id="@+id/mCameraButton"
             android:layout_width="wrap_content"
@@ -18,7 +31,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp"
             app:layout_constraintBottom_toTopOf="@+id/mPhotoImageView"/>
     <Button
             android:id="@+id/mGalleryButton"
@@ -35,18 +48,19 @@
 
 
     <ImageView
-            android:id="@+id/mPhotoImageView"
-            android:layout_width="350dp"
-            android:layout_height="400dp"
-            android:contentDescription="@string/descriptionImage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:color/darker_gray"
-            app:layout_constraintVertical_chainStyle="packed"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/mDetectButton"/>
-
+        android:id="@+id/mPhotoImageView"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/descriptionImage"
+        app:layout_constraintBottom_toTopOf="@+id/mDetectButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@android:color/darker_gray" />
 
     <Button
             android:text="@string/buttonDiagnose"

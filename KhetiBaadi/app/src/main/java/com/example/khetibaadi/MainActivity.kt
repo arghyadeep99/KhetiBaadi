@@ -37,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         mClassifier = Classifier(assets, mModelPath, mLabelPath, mInputSize)
 
+        setSupportActionBar(findViewById(R.id.toolbar))
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         resources.assets.open(mSamplePath).use {
             mBitmap = BitmapFactory.decodeStream(it)
             mBitmap = Bitmap.createScaledBitmap(mBitmap, mInputSize, mInputSize, true)
