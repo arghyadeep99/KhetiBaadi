@@ -18,6 +18,8 @@
 
 </div>
 
+---
+
 Plant disease has long been one of the major threats to food security because it dramatically reduces the crop yield and compromises its quality. Accurate and precise diagnosis of diseases has been a significant challenge. ​ According to the Food and Agriculture Organization of the United Nations (UN), transboundary plant pests and diseases affect food crops, causing significant losses to farmers and threatening food security. 
 
 The spread of transboundary plant pests and diseases has increased dramatically in recent years. Globalization, trade and climate change, as well as reduced resilience in production systems due to decades of agricultural intensification, have all played a part. Transboundary plant pests and diseases can easily spread to several countries and reach epidemic proportions. Outbreaks and upsurges can cause huge losses to crops and pastures, threatening the livelihoods of vulnerable farmers and the food and nutrition security of millions at a time.
@@ -74,6 +76,8 @@ We tried out various deep learning frameworks, beginning with PyTorch, to explor
 <div align="center">
 
 <img src="./Images/models_acc.png" width=600px/>
+
+</div>
 
 ### Future scope of this project:
 
